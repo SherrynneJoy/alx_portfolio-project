@@ -3,6 +3,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Float, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
+from db_setup import engine
 
 
 Base = declarative_base()
