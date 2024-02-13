@@ -4,25 +4,15 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
+@app.route('/landing', strict_slashes=False)
 def index():
-    return render_template('index.html')
+    return render_template('landing.html')
 
-@app.route('/products')
+@app.route('/products', strict_slashes=False)
 def products():
     return render_template('products.html')
 
-@app.route('/product/<int:product_id>')
-def product_detail(product_id):
-    product = {'id': product_id, 'name': 'Product Name', 'price': 10.99, 'description': 'Product Description'}
-    return render_template('product_detail.html', product=product)
-
-# Placeholder functions for database interaction
-def get_products():
-    return []
-
-def get_product(product_id):
-    return None
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
