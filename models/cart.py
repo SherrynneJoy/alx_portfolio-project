@@ -3,6 +3,7 @@
 
 from sqlalchemy import create_engine, Column, Integer, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
+from db_setup import engine
 
 Base = declarative_base()
 
@@ -17,5 +18,5 @@ class Cart(Base):
 
 
 # Create engine and table
-engine = create_engine('sqlite:///cart.db')
+# engine = create_engine('sqlite:///cart.db')
 Base.metadata.create_all(engine)
