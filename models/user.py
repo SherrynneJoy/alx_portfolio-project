@@ -3,7 +3,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Float, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
-
+from db_setup import engine
 
 Base = declarative_base()
 
@@ -18,5 +18,5 @@ class User(Base):
     password = Column(String(255), nullable=False)
 
     def __repr__(self):
-        return f"User(id={self.id}, username={self.username},
-                      email={self.email})"
+        return (f"User(id={self.id}, username={self.username}, "
+                f"email={self.email})")
