@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """sqlachemy configuration to establish a conection with the database"""
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
-# establish the db connection url
-db_url = 'mysql://root:@localhost:3306/planright_db'
-engine = create_engine(db_url)
-Session = sessionmaker(bind=engine)
-session = Session()
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/planrightdb'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
