@@ -1,3 +1,5 @@
+PlanRight - An African Online Digital Planner Store
+
 Executive Summary:
 PlanRight is a unique online store that aims to cater to the growing demand for digital planning solutions. Given the advancements in technology, it’s no wonder the custom made digital planner templates have become a hit and what better way to check off your to-do lists than by creating a list using ready made templates.  Our platform will exclusively offer a diverse range of stylish and functional digital planners, targeting individuals seeking efficient and eco-friendly alternatives to traditional paper planners. This article has been divided into two sections, the proposal and the process of building the application respectively.
 
@@ -27,4 +29,6 @@ Security:
 The project intends on using HTTPS: Implement to secure data transmission between the user's browser and your server in order to facilitate security on both the user’s end and the company’s end.
 Deployment:
 Deployment of the PlanRight application Application upon completion of all the previously mentioned steps.
+
+Links
 
